@@ -33,7 +33,7 @@ end
 packer.init {
   display = {
     open_fn = function()
-      return require("packer.util").float { border = rounded }
+      return require("packer.util").float { border = "rounded" }
     end
   }
 }
@@ -43,6 +43,57 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API frim vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use "gpanders/editorconfig.nvim" -- Respect editor config.
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+  use "nvim-lualine/lualine.nvim"
+  use "lewis6991/impatient.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "akinsho/toggleterm.nvim"
+  -- use "folke/which-key.nvim"
+
+  -- Colorschemes
+  use "lunarvim/darkplus.nvim"
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "hrsh7th/cmp-nvim-lsp" -- nvim-lsp completions
+  use "hrsh7th/cmp-nvim-lua" -- nvim-lua completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" -- snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "RRethy/vim-illuminate"
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "nvim-treesitter/nvim-treesitter-angular"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+  -- use "p00f/nvim-ts-rainbow"
+  -- use "nvim-treesitter/playground"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuratin after cloning packer.nvim
   -- Put this at the end after all plugins
