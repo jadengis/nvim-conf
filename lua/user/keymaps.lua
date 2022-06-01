@@ -25,6 +25,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Search
+keymap("n", "<leader><Space>", ":nohl<cr>", opts)
+
 -- Tree View
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
@@ -71,8 +74,11 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope keymaps
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
+keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
 
 -- Formatting
-keymap("n", "<leader>F", "<cmd>Format<cr>", opts)
+keymap("n", "<leader>ft", "<cmd>Format<cr>", opts)
