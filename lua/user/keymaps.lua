@@ -82,3 +82,17 @@ keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
 
 -- Formatting
 keymap("n", "<leader>ft", "<cmd>Format<cr>", opts)
+
+-- Quick Fix
+keymap("n", "<leader>co", "<cmd>copen<cr>", opts) -- Open quick fix
+keymap("n", "<leader>cc", "<cmd>cclose<cr>", opts) -- Close quick fix
+
+-- Buffers
+keymap("n", "<leader>bd", "<cmd>Bdelete<cr>", opts) -- Close buffer without close window
+
+-- Trouble
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
