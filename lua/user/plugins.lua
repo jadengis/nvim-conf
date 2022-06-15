@@ -70,7 +70,14 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp" -- nvim-lsp completions
   use "hrsh7th/cmp-nvim-lua" -- nvim-lua completions
+  use {
+    "David-Kunz/cmp-npm",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  } -- npm completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "github/copilot.vim" -- GitHub Co-pilot
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine

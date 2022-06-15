@@ -8,6 +8,7 @@ if not snip_status_ok then
   return
 end
 
+require("cmp-npm").setup({})
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -102,6 +103,7 @@ cmp.setup {
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
+        npm = "[npm]",
         nvim_lua = "[NVim Lua]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
@@ -112,6 +114,7 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
+    { name = 'npm', keyword_length = 4 },
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
