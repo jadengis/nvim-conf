@@ -58,6 +58,7 @@ return packer.startup(function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use "delphinus/vim-firestore"
   -- use "folke/which-key.nvim"
 
   -- Colorschemes
@@ -77,7 +78,7 @@ return packer.startup(function(use)
     },
   } -- npm completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "github/copilot.vim" -- GitHub Co-pilot
+  -- use "github/copilot.vim" -- GitHub Co-pilot
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine

@@ -74,14 +74,14 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope keymaps
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- Find Files
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts) -- Find Grep
+keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts) -- Find Recent
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
 
 -- Formatting
-keymap("n", "<leader>ft", "<cmd>Format<cr>", opts)
+keymap("n", "<leader>tf", "<cmd>Format<cr>", opts) -- Tools Format
 
 -- Quick Fix
 keymap("n", "<leader>co", "<cmd>copen<cr>", opts) -- Open quick fix
