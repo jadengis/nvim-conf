@@ -76,7 +76,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Telescope keymaps
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- Find Files
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts) -- Find Grep
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- Find Buffers
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- Find Buffers
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts) -- Find Recent
+keymap("n", "<leader>ft", "<cmd>Telescope treesitter<cr>", opts) -- Find Treesitter symbols
+
+keymap("n", "<leader>gr", "<cmd>Telescope lsp_references<cr>", opts) -- Find LSP references
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
 

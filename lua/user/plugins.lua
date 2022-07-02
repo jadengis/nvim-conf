@@ -90,6 +90,9 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "RRethy/vim-illuminate"
 
+  -- DAP
+  use "mfussenegger/nvim-dap" -- enable DAP
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
