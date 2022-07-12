@@ -59,6 +59,7 @@ return packer.startup(function(use)
     requires = "kyazdani42/nvim-web-devicons",
   }
   use "delphinus/vim-firestore"
+  use "norcalli/nvim-colorizer.lua"
   -- use "folke/which-key.nvim"
 
   -- Colorschemes
@@ -68,7 +69,6 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp" -- nvim-lsp completions
   use "hrsh7th/cmp-nvim-lua" -- nvim-lua completions
   use {
@@ -88,6 +88,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "onsails/lspkind.nvim"
   use "RRethy/vim-illuminate"
 
   -- DAP
