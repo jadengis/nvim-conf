@@ -63,7 +63,7 @@ return packer.startup(function(use)
   -- use "folke/which-key.nvim"
 
   -- Colorschemes
-  use "lunarvim/darkplus.nvim"
+  use "jadengis/darkplus.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -86,7 +86,8 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "williamboman/mason.nvim" -- Package manager for Neovim
+  use "williamboman/mason-lspconfig.nvim" -- LspConfig for mason.nvim
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "onsails/lspkind.nvim"
   use "RRethy/vim-illuminate"
@@ -103,10 +104,11 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "nvim-treesitter/playground"
   use "nvim-treesitter/nvim-treesitter-angular"
+  use "jadengis/nvim-ts-autotag"
   use "JoosepAlviste/nvim-ts-context-commentstring"
   -- use "p00f/nvim-ts-rainbow"
-  -- use "nvim-treesitter/playground"
 
   -- Git
   use "lewis6991/gitsigns.nvim"

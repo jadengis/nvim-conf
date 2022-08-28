@@ -10,6 +10,9 @@ configs.setup {
   autopairs = {
     enable = true,
   },
+  autotag = {
+    enable = true,
+  },
   highlight = {
     enable = true, -- false will disable to whole extension
     disable = { "" }, -- list of languages that will be disabled
@@ -19,4 +22,7 @@ configs.setup {
   context_commentstring = {
     enable = true,
   },
+  playground = {
+    enable = true,
+  }
 }
