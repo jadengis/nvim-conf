@@ -94,9 +94,11 @@ return packer.startup(function(use)
 
   -- DAP
   use "mfussenegger/nvim-dap" -- enable DAP
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  --[[ use "nvim-telescope/telescope-dap.nvim" ]]
   use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
@@ -105,7 +107,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "nvim-treesitter/playground"
-  use "nvim-treesitter/nvim-treesitter-angular"
+  --[[ use "nvim-treesitter/nvim-treesitter-angular" -- Currently broken with new version of TS ]]
   use "jadengis/nvim-ts-autotag"
   use "JoosepAlviste/nvim-ts-context-commentstring"
   -- use "p00f/nvim-ts-rainbow"

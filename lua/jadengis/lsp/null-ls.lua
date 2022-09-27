@@ -18,5 +18,8 @@ null_ls.setup {
     code_actions.eslint,
     diagnostics.eslint,
     diagnostics.stylint,
+
+    -- Elixir
+    diagnostics.credo,
   }
 }

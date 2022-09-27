@@ -93,7 +93,7 @@ keymap("n", "<leader>co", "<cmd>copen<cr>", opts) -- Open quick fix
 keymap("n", "<leader>cc", "<cmd>cclose<cr>", opts) -- Close quick fix
 
 -- Buffers
-keymap("n", "<leader>bd", "<cmd>Bdelete<cr>", opts) -- Close buffer without close window
+keymap("n", "<S-q>", "<cmd>Bdelete!<cr>", opts) -- Close buffer without close window
 
 -- Trouble
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
@@ -101,3 +101,16 @@ keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
 keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
 keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+
+-- DAP
+keymap("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", opts)
+keymap("n", "<leader>dc", "<cmd>DapContinue<cr>", opts)
+keymap("n", "<leader>di", "<cmd>DapStepInto<cr>", opts)
+keymap("n", "<leader>do", "<cmd>DapStepOver<cr>", opts)
+keymap("n", "<leader>dO", "<cmd>DapStepOut<cr>", opts)
+keymap("n", "<leader>dr", "<cmd>DapToggleRepl<cr>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+keymap("n", "<leader>dt", "<cmd>DapTerminate<cr>", opts)
+keymap("n", "<A-k>", "<cmd>lua require'dapui'.eval()<cr>", opts)
+keymap("v", "<A-k>", "<cmd>lua require'dapui'.eval()<cr>", opts)
