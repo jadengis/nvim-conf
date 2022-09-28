@@ -18,7 +18,7 @@ for _, server in pairs(servers) do
   }
 
   -- Apply custom settings for all required LSPs
-  local has_custom_opts, server_custom_opts = pcall(require, "jadengis.lsp.settings." .. server)
+  local has_custom_opts, server_custom_opts = pcall(require, "jadengis.lsp.opts." .. server)
   if has_custom_opts then
     opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
   end
