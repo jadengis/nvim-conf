@@ -13,12 +13,12 @@ lsp_installer.setup {
 
 for _, server in pairs(servers) do
   local opts = {
-    on_attach = require("jadengis.lsp.handlers").on_attach,
-    capabilities = require("jadengis.lsp.handlers").capabilities,
+    on_attach = require("config.lsp.handlers").on_attach,
+    capabilities = require("config.lsp.handlers").capabilities,
   }
 
   -- Apply custom settings for all required LSPs
-  local has_custom_opts, server_custom_opts = pcall(require, "jadengis.lsp.opts." .. server)
+  local has_custom_opts, server_custom_opts = pcall(require, "config.lsp.opts." .. server)
   if has_custom_opts then
     opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
   end

@@ -11,7 +11,7 @@ local adapters = { "mix_task" }
 
 -- Load all adapters
 for _, adapter in pairs(adapters) do
-  local has_opts, adapter_opts = pcall(require, "jadengis.dap.opts." .. adapter)
+  local has_opts, adapter_opts = pcall(require, "config.dap.opts." .. adapter)
   if has_opts then
     dap.adapters[adapter] = adapter_opts
   end
