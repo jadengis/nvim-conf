@@ -94,6 +94,7 @@ keymap("n", "<leader>cc", "<cmd>cclose<cr>", opts) -- Close quick fix
 
 -- Buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<cr>", opts) -- Close buffer without close window
+keymap("n", "<A-Q>", "<cmd>qa<cr>", opts) -- Close buffer without close window
 
 -- Trouble
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)

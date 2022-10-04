@@ -58,6 +58,7 @@ return packer.startup(function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use "rmagatti/auto-session"
   use "delphinus/vim-firestore"
   use "norcalli/nvim-colorizer.lua"
   -- use "folke/which-key.nvim"
