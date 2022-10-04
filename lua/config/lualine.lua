@@ -33,8 +33,7 @@ local mode = {
 
 local filetype = {
   "filetype",
-  icons_enabled = false,
-  icon = nil,
+  colored = false,
 }
 
 local branch = {
@@ -70,25 +69,17 @@ lualine.setup({
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
       "dashboard",
-      "NvimTree",
       "Outline",
-      "dapui_scopes",
-      "dapui_breakpoints",
-      "dapui_stacks",
-      "dapui_watches",
-      "dapui_console",
-      "dap-repl",
     },
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { branch, diagnostics },
-    lualine_b = { mode },
-    lualine_c = {},
-    -- lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_y = { location },
-    lualine_z = { progress },
+    lualine_a = { mode },
+    lualine_b = { branch, diff },
+    lualine_c = { diagnostics },
+    lualine_x = { spaces },
+    lualine_y = { "encoding", filetype },
+    lualine_z = { location, progress },
   },
   inactive_sections = {
     lualine_a = {},
@@ -99,5 +90,5 @@ lualine.setup({
     lualine_z = {},
   },
   tabline = {},
-  extensions = {},
+  extensions = { "nvim-tree", "nvim-dap-ui", "toggleterm"},
 })

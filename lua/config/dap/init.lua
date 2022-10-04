@@ -7,13 +7,19 @@ if not dapui_ok then
   return
 end
 
-local adapters = { "mix_task" }
+local languages = { "elixir" }
 
 -- Load all adapters
-for _, adapter in pairs(adapters) do
-  local has_opts, adapter_opts = pcall(require, "config.dap.opts." .. adapter)
+for _, language in pairs(languages) do
+  local has_opts, language_opts = pcall(require, "config.dap.opts." .. language)
   if has_opts then
-    dap.adapters[adapter] = adapter_opts
+    for adapter, opts in pairs(language_opts.adapters) do
+      dap.adapters[adapter] = opts
+    end
+    for configuration, opts in pairs(language_opts.configurations) do
+      local tbl = dap.configurations[configuration]
+      dap.configurations[configuration] = vim.tbl_deep_extend("force", tbl or {}, opts)
+    end
   end
 end
 
