@@ -92,6 +92,8 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "onsails/lspkind.nvim"
   use "RRethy/vim-illuminate"
+  use "folke/neodev.nvim" -- Neovim specific completions.
+
 
   -- DAP
   use "mfussenegger/nvim-dap" -- enable DAP
@@ -105,6 +107,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
+    commit = "d47f3469e3a783e7d1382ab3fe95ba2fa3021ec0",
     run = ":TSUpdate",
   }
   use "nvim-treesitter/playground"
