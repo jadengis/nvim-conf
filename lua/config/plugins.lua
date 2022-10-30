@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use "rmagatti/auto-session"
   use "delphinus/vim-firestore"
   use "norcalli/nvim-colorizer.lua"
+  use "rcarriga/nvim-notify"
   -- use "folke/which-key.nvim"
 
   -- Colorschemes
