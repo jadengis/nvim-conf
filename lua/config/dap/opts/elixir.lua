@@ -1,8 +1,15 @@
+-- Resolve debugger command.
+local cmd = vim.fn.stdpath("data") .. '/mason/packages/elixir-ls/debugger.sh' -- debugger.bat for windows
+local install_path = vim.fn.stdpath("data") .. "/elixir-ls/debugger.sh"
+if vim.fn.empty(vim.fn.glob(install_path)) == 0 then
+   cmd =  install_path
+end
+
 local M = {}
 M.adapters = {
   mix_task = {
     type = "executable",
-    command = vim.fn.stdpath("data") .. '/mason/packages/elixir-ls/debugger.sh', -- debugger.bat for windows
+    command = cmd,
     args = {}
   }
 }
