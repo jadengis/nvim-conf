@@ -29,8 +29,8 @@ local options = {
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  textwidth=100,
-  wrap = true,                              -- wrap text
+  textwidth=0,                             -- don't hard wrap text 
+  wrap = true,                             -- wrap text
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
@@ -45,3 +45,4 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd [[set clipboard+=unnamedplus]]

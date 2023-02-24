@@ -2,6 +2,7 @@ local util = require "lspconfig.util"
 local opts = {
   init_options = {
     userLanguages = {
+      elixir = "html",
       heex = "html"
     }
   },

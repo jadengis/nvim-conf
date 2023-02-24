@@ -19,6 +19,10 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Respect soft wraps when moving around
+keymap("n", "j", "gj", opts)
+keymap("n", "k", "gk", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -48,8 +52,14 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<Down>", "<C-o>gj", opts)
+keymap("i", "<Up>", "<C-o>gk", opts)
 
 -- Visual --
+-- Respect soft wraps when moving around
+keymap("v", "j", "gj", opts)
+keymap("v", "k", "gk", opts)
+
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
